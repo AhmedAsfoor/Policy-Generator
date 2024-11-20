@@ -5,7 +5,8 @@
   "@mui/material": "^5.x.x",
   "formik": "^2.x.x",
   "yup": "^1.x.x",
-  "react-scripts": "^5.0.1"
+  "react-scripts": "^5.0.1",
+  "@monaco-editor/react": "^4.x.x"
 },
   "scripts": {
     "start": "react-scripts start",
