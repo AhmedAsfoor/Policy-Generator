@@ -1,0 +1,6 @@
+{
+  "short_name": "Policy Builder",
+  "name": "Azure Policy Builder",
+  "start_url": ".",
+  "display": "standalone"
+}
