@@ -15,7 +15,7 @@
  */
 export interface SimpleCondition {
   field: string;
-  [key: string]: string;  // Allows for different operators like equals, contains, etc.
+  [key: string]: string | string[] | any; // Allow both string and array values
 }
 
 /**

@@ -102,7 +102,13 @@ export const useCondition = (
     [simpleCondition]
   );
   
-  const value = simpleCondition[operator];
+  const value = useMemo(() => {
+    const currentValue = simpleCondition[operator];
+    if ((operator === 'in' || operator === 'notIn') && Array.isArray(currentValue)) {
+      return JSON.stringify(currentValue);
+    }
+    return currentValue;
+  }, [simpleCondition, operator]);
 
   /**
    * Handles changes to the condition operator
@@ -143,7 +149,30 @@ export const useCondition = (
    */
   const handleValueChange = useCallback((newValue: string) => {
     safeUpdate('value change', () => {
-      const newCondition: SimpleCondition = { ...simpleCondition, [operator]: newValue };
+      let processedValue: string | string[];
+      
+      // Process array values for 'in' and 'notIn' operators
+      if (operator === 'in' || operator === 'notIn') {
+        try {
+          // Try to parse as JSON array first
+          processedValue = JSON.parse(newValue);
+          if (!Array.isArray(processedValue)) {
+            // If valid JSON but not array, treat as regular string
+            processedValue = newValue;
+          }
+        } catch {
+          // If not valid JSON, treat as regular string
+          processedValue = newValue;
+        }
+      } else {
+        processedValue = newValue;
+      }
+
+      const newCondition: SimpleCondition = { 
+        ...simpleCondition, 
+        [operator]: processedValue 
+      };
+      
       onUpdate(isNot ? { not: newCondition } : newCondition);
     });
   }, [simpleCondition, operator, isNot, onUpdate, safeUpdate]);
