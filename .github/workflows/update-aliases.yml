@@ -16,13 +16,6 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      
-    - name: Remove AzureRM if present
-      shell: pwsh
-      run: |
-        if (Get-Module -ListAvailable -Name AzureRM) {
-          Uninstall-Module -Name AzureRM -AllVersions -Force
-        }
         
     - name: Install Azure PowerShell Module
       shell: pwsh
