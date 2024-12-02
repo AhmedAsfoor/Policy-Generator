@@ -36,15 +36,7 @@ jobs:
       run: |
         ./src/scripts/Get_All_Aliases.ps1
         
-    - name: Check for changes
-      id: git-check
-      run: |
-        git status --porcelain
-        echo "changed=$(git status --porcelain | grep . && echo "true" || echo "false")" >> $GITHUB_OUTPUT
-      shell: bash
-        
     - name: Commit and push if changed
-      if: steps.git-check.outputs.changed == 'true'
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
