@@ -1431,6 +1431,9 @@ button:hover {
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 9999;
+  min-width: 700px;
+  width: auto !important;
+  max-width: 1000px;
 }
 
 .field-option {
@@ -1438,14 +1441,20 @@ button:hover {
   cursor: pointer;
   font-size: 12px;
   white-space: nowrap;
-  /* Prevent text wrapping */
   background: white;
   width: fit-content;
-  /* Added to make each option fit its content */
   min-width: 100%;
-  /* Ensure it's at least as wide as the container */
   overflow: visible;
-  /* Added to ensure text isn't cut off */
+  padding-left: 24px;
+}
+
+.field-group-header {
+  padding: 8px 12px;
+  font-weight: 600;
+  background-color: #f5f5f5;
+  color: #666;
+  font-size: 0.9em;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .field-option:hover {

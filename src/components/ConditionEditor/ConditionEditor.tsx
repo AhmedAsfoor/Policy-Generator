@@ -1,9 +1,21 @@
 /**
  * ConditionEditor Component
+ * 
+ * A complex component that provides a complete interface for editing Azure Policy conditions.
+ * It allows users to build and modify policy conditions through a user-friendly interface.
+ * 
+ * Features:
+ * - Field selection with searchable dropdown and resource type grouping
+ * - Operator selection based on field type
+ * - Dynamic value input with context-aware suggestions
+ * - NOT operator toggle for negating conditions
+ * - Support for both simple and complex conditions
+ * 
+ * @component
  */
 
 import React, { useRef } from 'react';
-import { AVAILABLE_FIELDS, OPERATOR_PLACEHOLDERS } from '../../constants/policy';
+import { AVAILABLE_FIELDS, OPERATOR_PLACEHOLDERS, COMMON_FIELDS, GROUPED_ALIASES } from '../../constants/policy';
 import type { SimpleCondition, NotCondition } from '../../types/policy';
 import resourceTypes from '../../data/azure_resource_types.json';
 import { useDropdown } from './hooks/useDropdown';
@@ -14,58 +26,101 @@ import { SearchableInput } from './components/SearchableInput';
 import { Dropdown } from './components/Dropdown';
 
 /**
- * Props interface for the ConditionEditor component
- * @property condition - The current condition object to edit
- * @property onUpdate - Callback function to handle condition updates
+ * Props for the ConditionEditor component
+ * 
+ * @property condition - The current condition object being edited. Can be either a simple condition
+ *                      or a NOT condition that negates another condition.
+ * @property onUpdate - Callback function triggered when the condition is modified. Receives the
+ *                     updated condition object as its argument.
  */
 interface ConditionEditorProps {
   condition: SimpleCondition | NotCondition;
   onUpdate: (condition: SimpleCondition | NotCondition) => void;
 }
 
-// Constants for pagination
+// Constants for pagination in dropdowns
 const ITEMS_PER_PAGE = 50;
 const VALUE_ITEMS_PER_PAGE = 50;
 
 /**
- * ConditionEditor component for editing policy conditions
+ * Represents a field option in the dropdown
  * 
- * This component provides a complete interface for editing policy conditions, including:
- * - Field selection with search functionality
- * - Operator selection
- * - Value input with resource type suggestions
- * - NOT operator toggle
+ * @property display - The text to display in the UI
+ * @property value - The actual value used in the condition
+ */
+interface Field {
+  display: string;
+  value: string;
+}
+
+/**
+ * Represents a group of fields in the dropdown
+ * 
+ * @property resourceType - The name of the resource type that groups the fields
+ * @property fields - Array of Field objects belonging to this group
+ */
+interface FieldGroup {
+  resourceType: string;
+  fields: Field[];
+}
+
+/**
+ * Renders a header for grouped fields in the dropdown
+ * 
+ * @component
+ * @property resourceType - The name of the resource type group to display
+ */
+const GroupHeader: React.FC<{ resourceType: string }> = ({ resourceType }) => (
+  <div className="field-group-header">
+    {resourceType}
+  </div>
+);
+
+/**
+ * The main ConditionEditor component
+ * 
+ * Provides a complete interface for editing Azure Policy conditions with features like:
+ * - Searchable field selection with resource type grouping
+ * - Context-aware operator selection
+ * - Dynamic value input with suggestions
+ * - NOT condition toggle
  * - Infinite scrolling for large lists
  * 
- * The component manages complex state through custom hooks and provides
- * a user-friendly interface for building policy conditions.
+ * The component uses custom hooks for managing complex state:
+ * - useDropdown: Manages dropdown state and pagination
+ * - useCondition: Handles condition state and updates
  * 
  * @example
+ * ```tsx
  * <ConditionEditor
- *   condition={currentCondition}
- *   onUpdate={handleConditionUpdate}
+ *   condition={{
+ *     field: "type",
+ *     operator: "equals",
+ *     value: "Microsoft.Storage/storageAccounts"
+ *   }}
+ *   onUpdate={(updatedCondition) => handleConditionUpdate(updatedCondition)}
  * />
+ * ```
  */
 export const ConditionEditor: React.FC<ConditionEditorProps> = ({ condition, onUpdate }) => {
-  // Refs for input elements
+  // Refs for input elements to manage focus and positioning
   const inputRef = useRef<HTMLInputElement>(null);
   const valueInputRef = useRef<HTMLInputElement>(null);
-  
+
   // Initialize condition state management
   const conditionState = useCondition(condition, onUpdate);
-  
-  // Initialize dropdown state for field selection
+
+  // Initialize dropdown states for field and value selection
   const fieldDropdown = useDropdown(
-    inputRef, 
-    ITEMS_PER_PAGE, 
+    inputRef,
+    ITEMS_PER_PAGE,
     AVAILABLE_FIELDS.length,
     conditionState.simpleCondition.field
   );
-  
-  // Initialize dropdown state for value selection
+
   const valueDropdown = useDropdown(
-    valueInputRef, 
-    VALUE_ITEMS_PER_PAGE, 
+    valueInputRef,
+    VALUE_ITEMS_PER_PAGE,
     resourceTypes.length,
     conditionState.value
   );
@@ -73,6 +128,8 @@ export const ConditionEditor: React.FC<ConditionEditorProps> = ({ condition, onU
   /**
    * Renders the value input field with appropriate dropdown content
    * Handles different behavior based on field type (resource type vs other fields)
+   * 
+   * @returns JSX.Element The rendered value input component
    */
   const renderValueInput = () => {
     const isTypeField = conditionState.simpleCondition.field === 'type';
@@ -134,6 +191,74 @@ export const ConditionEditor: React.FC<ConditionEditorProps> = ({ condition, onU
     );
   };
 
+  /**
+   * Renders the field options in the dropdown
+   * Groups the fields by resource type and handles filtering
+   * 
+   * @returns JSX.Element The rendered field options
+   */
+  const renderFieldOptions = () => {
+    const searchTerm = fieldDropdown.searchTerm.toLowerCase();
+    const filteredGroups: FieldGroup[] = [];
+    let totalItems = 0;
+
+    // Add common fields first
+    const filteredCommonFields = COMMON_FIELDS
+      .filter((field: Field) => field.display.toLowerCase().includes(searchTerm));
+    
+    if (filteredCommonFields.length > 0) {
+      filteredGroups.push({
+        resourceType: 'Common Fields',
+        fields: filteredCommonFields
+      });
+      totalItems += filteredCommonFields.length;
+    }
+
+    // Add resource type groups
+    for (const group of GROUPED_ALIASES) {
+      const filteredFields = group.fields
+        .filter((field: Field) => field.display.toLowerCase().includes(searchTerm));
+
+      if (filteredFields.length > 0) {
+        filteredGroups.push({
+          resourceType: group.resourceType,
+          fields: filteredFields
+        });
+        totalItems += filteredFields.length;
+      }
+
+      if (totalItems >= fieldDropdown.displayCount) break;
+    }
+
+    return (
+      <>
+        {filteredGroups.map(group => (
+          <React.Fragment key={group.resourceType}>
+            <GroupHeader resourceType={group.resourceType} />
+            {group.fields.map((field: Field) => (
+              <div
+                key={field.value}
+                className="field-option"
+                onClick={() => {
+                  const valueWithoutParens = field.display.split(' (')[0];
+                  conditionState.handleFieldChange(valueWithoutParens);
+                  fieldDropdown.setCurrentValue(valueWithoutParens);
+                  fieldDropdown.setIsOpen(false);
+                  fieldDropdown.setSearchTerm('');
+                }}
+              >
+                {field.display}
+              </div>
+            ))}
+          </React.Fragment>
+        ))}
+        {totalItems < AVAILABLE_FIELDS.length && (
+          <div className="field-option-loading">Loading more...</div>
+        )}
+      </>
+    );
+  };
+
   return (
     <div className="condition-editor">
       {/* NOT operator toggle */}
@@ -142,7 +267,7 @@ export const ConditionEditor: React.FC<ConditionEditorProps> = ({ condition, onU
         onChange={conditionState.handleNotToggle}
       />
 
-      {/* Field selection input with dropdown */}
+      {/* Field selection input with grouped dropdown */}
       <SearchableInput
         inputRef={inputRef}
         value={fieldDropdown.currentValue}
@@ -166,27 +291,7 @@ export const ConditionEditor: React.FC<ConditionEditorProps> = ({ condition, onU
             width={inputRef.current?.offsetWidth}
             onScroll={fieldDropdown.handleScroll}
           >
-            {AVAILABLE_FIELDS
-              .filter(field => field.display.toLowerCase().includes(fieldDropdown.searchTerm.toLowerCase()))
-              .slice(0, fieldDropdown.displayCount)
-              .map(field => (
-                <div
-                  key={field.value}
-                  className="field-option"
-                  onClick={() => {
-                    const valueWithoutParens = field.display.split(' (')[0];
-                    conditionState.handleFieldChange(valueWithoutParens);
-                    fieldDropdown.setCurrentValue(valueWithoutParens);
-                    fieldDropdown.setIsOpen(false);
-                    fieldDropdown.setSearchTerm('');
-                  }}
-                >
-                  {field.display}
-                </div>
-              ))}
-            {fieldDropdown.displayCount < AVAILABLE_FIELDS.length && (
-              <div className="field-option-loading">Loading more...</div>
-            )}
+            {renderFieldOptions()}
           </Dropdown>
         }
       />
@@ -197,7 +302,7 @@ export const ConditionEditor: React.FC<ConditionEditorProps> = ({ condition, onU
         onChange={conditionState.handleOperatorChange}
       />
 
-      {/* Value input field */}
+      {/* Value input field with context-aware suggestions */}
       {renderValueInput()}
     </div>
   );

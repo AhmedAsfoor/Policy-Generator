@@ -21,11 +21,20 @@
 import AzPolicyAliases from '../data/AzPolicyAliases.json';
 import { PolicyTemplate } from '../types/policy';
 
+interface GroupedField {
+  display: string;
+  value: string;
+}
+
+interface AliasGroup {
+  resourceType: string;
+  fields: GroupedField[];
+}
+
 /**
- * Common fields that should appear at the top of field lists
- * These are frequently used fields that should be easily accessible
+ * Common fields that appear at the top of field lists
  */
-const COMMON_FIELDS = [
+export const COMMON_FIELDS = [
   "name",
   "fullName",
   "kind",
@@ -34,28 +43,55 @@ const COMMON_FIELDS = [
   "id",
   "identity.type",
   "tags"
-] as const;
+].map(field => ({ display: field, value: field }));
+
+/**
+ * Groups aliases by their resource type
+ * @param aliases The Azure Policy aliases object
+ * @returns An array of fields grouped by resource type
+ */
+const groupAliasByResourceType = (aliases: typeof AzPolicyAliases): AliasGroup[] => {
+  const grouped = new Map<string, GroupedField[]>();
+  
+  Object.values(aliases).forEach(item => {
+    const aliases = Array.isArray(item.Aliases) ? item.Aliases : [item.Aliases];
+    const resourceType = item.ResourceType;
+    
+    if (!grouped.has(resourceType)) {
+      grouped.set(resourceType, []);
+    }
+    
+    aliases.forEach((alias: string) => {
+      grouped.get(resourceType)?.push({
+        display: alias,
+        value: alias
+      });
+    });
+  });
+  
+  return Array.from(grouped.entries())
+    .map(([resourceType, fields]) => ({
+      resourceType,
+      fields: fields.sort((a, b) => a.display.localeCompare(b.display))
+    }))
+    .sort((a, b) => a.resourceType.localeCompare(b.resourceType));
+};
+
+/**
+ * Grouped aliases by resource type
+ * Contains all Azure Policy aliases organized by their resource type
+ */
+export const GROUPED_ALIASES = groupAliasByResourceType(AzPolicyAliases);
 
 /**
  * Available fields for policy conditions
  * Combines common fields with Azure Policy aliases
- * Each field has a display name and actual value
  */
 export const AVAILABLE_FIELDS = [
   // Add common fields first
-  ...COMMON_FIELDS.map(field => ({ display: field, value: field })),
-  // Add Azure Policy aliases
-  ...Object.values(AzPolicyAliases)
-    .flatMap(item => {
-      // Handle both string[] and string cases for Aliases
-      const aliases = Array.isArray(item.Aliases) ? item.Aliases : [item.Aliases];
-      return aliases;
-    })
-    .map((alias: string) => ({
-      display: alias,
-      value: alias
-    }))
-    .sort((a, b) => a.display.localeCompare(b.display))
+  ...COMMON_FIELDS,
+  // Add all fields from grouped aliases
+  ...GROUPED_ALIASES.flatMap(group => group.fields)
 ] as const;
 
 /**
