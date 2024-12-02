@@ -23,10 +23,11 @@ jobs:
     - name: Login to Azure PowerShell
       shell: pwsh
       run: |
-        $securePassword = ConvertTo-SecureString '${{ secrets.AZURE_CLIENT_SECRET }}' -AsPlainText -Force
-        $credential = New-Object System.Management.Automation.PSCredential('${{ secrets.AZURE_CLIENT_ID }}', $securePassword)
-        Connect-AzAccount -ServicePrincipal -Tenant '${{ secrets.AZURE_TENANT_ID }}' -Credential $credential
-        Set-AzContext -Subscription '${{ secrets.AZURE_SUBSCRIPTION_ID }}'
+        $creds = '${{ secrets.AZURE_CREDENTIALS }}' | ConvertFrom-Json
+        $securePassword = ConvertTo-SecureString $creds.clientSecret -AsPlainText -Force
+        $credential = New-Object System.Management.Automation.PSCredential($creds.clientId, $securePassword)
+        Connect-AzAccount -ServicePrincipal -Tenant $creds.tenantId -Credential $credential
+        Set-AzContext -Subscription $creds.subscriptionId
         
     - name: Run PowerShell script
       shell: pwsh
