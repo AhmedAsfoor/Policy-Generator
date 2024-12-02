@@ -10,11 +10,20 @@ on:
 jobs:
   update-aliases:
     runs-on: windows-latest
+    permissions:
+      contents: write  # This is needed for pushing changes
     
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
       
+    - name: Remove AzureRM if present
+      shell: pwsh
+      run: |
+        if (Get-Module -ListAvailable -Name AzureRM) {
+          Uninstall-Module -Name AzureRM -AllVersions -Force
+        }
+        
     - name: Install Azure PowerShell Module
       shell: pwsh
       run: |
@@ -38,15 +47,17 @@ jobs:
       id: git-check
       run: |
         git status --porcelain
-        echo "::set-output name=modified::$(if git status --porcelain | grep -q .; then echo "true"; else echo "false"; fi)"
+        echo "changed=$(git status --porcelain | grep . && echo "true" || echo "false")" >> $GITHUB_OUTPUT
       shell: bash
         
     - name: Commit and push if changed
-      if: steps.git-check.outputs.modified == 'true'
+      if: steps.git-check.outputs.changed == 'true'
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add src/data/AzPolicyAliases.json
         git commit -m "Update policy aliases"
         git push
-      shell: bash 
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      shell: bash
