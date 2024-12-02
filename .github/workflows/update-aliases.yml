@@ -9,7 +9,7 @@ on:
 
 jobs:
   update-aliases:
-    runs-on: windows-latest  # Using Windows runner since it's a PowerShell script
+    runs-on: windows-latest
     
     steps:
     - name: Checkout repository
@@ -19,6 +19,11 @@ jobs:
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
+        
+    - name: Install Azure PowerShell Module
+      shell: pwsh
+      run: |
+        Install-Module -Name Az -Force -AllowClobber -Scope CurrentUser
         
     - name: Run PowerShell script
       shell: pwsh
