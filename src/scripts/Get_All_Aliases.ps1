@@ -16,5 +16,5 @@ $output = $aliases | ForEach-Object {
 
 $jsonOutput = $output | ConvertTo-Json -Depth 10 -Compress
 
-$outputFilePath = "./AzPolicyAliases.json"
-$jsonOutput | Out-File -FilePath $outputFilePath -Encoding utf8
+$outputFilePath = "src/data/AzPolicyAliases.json"
+$jsonOutput | Out-File -FilePath $outputFilePath -Encoding utf8 -Force
