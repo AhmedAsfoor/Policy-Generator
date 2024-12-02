@@ -1,0 +1,43 @@
+name: Update Policy Aliases
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every day
+    - cron: '0 0 * * *'
+  # Allows manual trigger from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  update-aliases:
+    runs-on: windows-latest  # Using Windows runner since it's a PowerShell script
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Connect to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        
+    - name: Run PowerShell script
+      shell: pwsh
+      run: |
+        ./src/scripts/Get_All_Aliases.ps1
+        
+    - name: Check for changes
+      id: git-check
+      run: |
+        git status --porcelain
+        echo "::set-output name=modified::$(if git status --porcelain | grep -q .; then echo "true"; else echo "false"; fi)"
+      shell: bash
+        
+    - name: Commit and push if changed
+      if: steps.git-check.outputs.modified == 'true'
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add src/data/AzPolicyAliases.json
+        git commit -m "Update policy aliases"
+        git push
+      shell: bash 
