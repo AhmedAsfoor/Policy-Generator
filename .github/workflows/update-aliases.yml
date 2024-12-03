@@ -43,8 +43,14 @@ jobs:
         git config --local user.name "github-actions[bot]"
         git add src/data/AzPolicyAliases.json
         git add src/data/azure_resource_types.json
-        git commit -m "Update policy aliases and resource types"
-        git push
+        
+        # Only commit and push if there are changes
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Update policy aliases and resource types"
+          git push
+        fi
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       shell: bash
