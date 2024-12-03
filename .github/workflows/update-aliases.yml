@@ -1,4 +1,4 @@
-name: Update Policy Aliases
+name: Update Policy Aliases and Resource Types
 
 on:
   schedule:
@@ -31,17 +31,19 @@ jobs:
         Connect-AzAccount -ServicePrincipal -Tenant $creds.tenantId -Credential $credential
         Set-AzContext -Subscription $creds.subscriptionId
         
-    - name: Run PowerShell script
+    - name: Run PowerShell scripts
       shell: pwsh
       run: |
         ./src/scripts/Get_All_Aliases.ps1
+        ./src/scripts/Get_all_types.ps1
         
-    - name: Commit and push if changed
+    - name: Commit and push
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add src/data/AzPolicyAliases.json
-        git commit -m "Update policy aliases"
+        git add src/data/azure_resource_types.json
+        git commit -m "Update policy aliases and resource types"
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -19,7 +19,7 @@ $uniqueResourceTypes = $resourceTypes | Sort-Object -Unique
 $jsonOutput = $uniqueResourceTypes | ConvertTo-Json -Depth 1 -Compress
 
 # Save the JSON to a file
-$jsonFilePath = "azure_resource_types.json"
+$jsonFilePath = "src/data/azure_resource_types.json"
 Set-Content -Path $jsonFilePath -Value $jsonOutput -Encoding utf8
 
 # Confirm the file is saved
