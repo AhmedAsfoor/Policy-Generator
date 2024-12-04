@@ -37,6 +37,7 @@ jobs:
         ./src/scripts/Get_All_Aliases.ps1
         ./src/scripts/Get_all_types.ps1
         ./src/scripts/get_mod_aliases.ps1
+        ./src/scripts/get_rbac.ps1
         
     - name: Commit and push
       run: |
@@ -45,6 +46,7 @@ jobs:
         git add src/data/AzPolicyAliases.json
         git add src/data/azure_resource_types.json
         git add src/data/modAlias.json
+        git add src/data/control_plane_roles.json
         
         # Only commit and push if there are changes
         if git diff --staged --quiet; then
