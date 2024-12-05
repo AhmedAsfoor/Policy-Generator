@@ -117,9 +117,11 @@ export const useParameters = (initialParameters: Parameters) => {
         }),
         defaultValue: parameterForm.type === 'object'
           ? (parameterForm.defaultValue ? JSON.parse(parameterForm.defaultValue) : {})
-          : parameterForm.type === 'integer' || parameterForm.type === 'float'
-            ? Number(parameterForm.defaultValue)
-            : parameterForm.defaultValue
+          : parameterForm.type === 'array'
+            ? JSON.parse(parameterForm.defaultValue)
+            : parameterForm.type === 'integer' || parameterForm.type === 'float'
+              ? Number(parameterForm.defaultValue)
+              : parameterForm.defaultValue
       };
 
       // Call the update function provided by the parent
@@ -139,6 +141,7 @@ export const useParameters = (initialParameters: Parameters) => {
       setDefaultValueError('');
     } catch (error) {
       console.error('Error adding parameter:', error);
+      setDefaultValueError('Invalid JSON format');
     }
   };
 
@@ -157,9 +160,11 @@ export const useParameters = (initialParameters: Parameters) => {
       description: param.metadata?.description || '',
       displayName: param.metadata?.displayName || '',
       allowedValues: param.allowedValues ? [JSON.stringify(param.allowedValues)] : [],
-      defaultValue: param.type.toLowerCase() === 'array' || param.type.toLowerCase() === 'object'
-        ? JSON.stringify(param.defaultValue)
-        : param.defaultValue || ''
+      defaultValue: param.type.toLowerCase() === 'array'
+        ? JSON.stringify(param.defaultValue, null, 2)
+        : param.type.toLowerCase() === 'object'
+          ? JSON.stringify(param.defaultValue, null, 2)
+          : String(param.defaultValue || '')
     });
     setEditingParameter(name);
   };
