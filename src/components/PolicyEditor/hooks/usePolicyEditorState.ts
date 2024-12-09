@@ -93,6 +93,9 @@ export const usePolicyEditorState = () => {
    * @param value - New effect value
    */
   const handleEffectChange = (value: string) => {
+    // Capitalize first letter for the default value
+    const defaultValue = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
+    
     setSelectedEffect(value);
     setPolicy(prev => ({
       ...prev,
@@ -103,7 +106,7 @@ export const usePolicyEditorState = () => {
           effect: {
             ...prev.properties.parameters.effect,
             allowedValues: value.toLowerCase() === 'modify' ? ['Modify', 'Disabled'] : ['Audit', 'Deny', 'Disabled'],
-            defaultValue: value
+            defaultValue: defaultValue
           }
         },
         policyRule: {

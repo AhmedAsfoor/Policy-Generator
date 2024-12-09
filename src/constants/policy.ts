@@ -180,7 +180,7 @@ export const initialPolicyTemplate: PolicyTemplate = {
           description: 'The effect determines what happens when the policy rule is evaluated to match'
         },
         allowedValues: ['Audit', 'Deny', 'Disabled'],
-        defaultValue: 'audit'
+        defaultValue: 'Audit'
       }
     },
     policyRule: {
