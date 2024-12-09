@@ -6,8 +6,9 @@ import { PolicyTemplate, Condition, NestedCondition } from './policy';
  * - conditions: Policy condition configuration
  * - parameters: Policy parameter management
  * - details: Additional policy details (shown for 'modify' effect)
+ * - about: Information about the policy editor
  */
-export type TabType = 'basicInfo' | 'conditions' | 'parameters' | 'details';
+export type TabType = 'basicInfo' | 'conditions' | 'parameters' | 'details' | 'about';
 
 /**
  * Interface for parameter form state

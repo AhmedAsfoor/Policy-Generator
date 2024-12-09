@@ -71,6 +71,14 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({
           Details
         </button>
       )}
+
+      {/* About tab */}
+      <button 
+        className={`tab ${activeTab === 'about' ? 'active' : ''}`}
+        onClick={() => setActiveTab('about')}
+      >
+        About
+      </button>
     </div>
   );
 }; 

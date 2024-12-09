@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PolicyEditor from './components/PolicyEditor/PolicyEditor';
 
 /**
@@ -25,6 +25,10 @@ import PolicyEditor from './components/PolicyEditor/PolicyEditor';
  * );
  */
 function App() {
+  useEffect(() => {
+    document.title = 'Azure Policy Editor';
+  }, []);
+
   return <PolicyEditor />;
 }
 

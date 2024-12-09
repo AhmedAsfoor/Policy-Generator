@@ -2074,4 +2074,65 @@ button:hover {
   }
 }
 
+/* About tab styles */
+.about-tab {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-section {
+  margin-bottom: 2rem;
+}
+
+.about-section h2 {
+  color: #0078d4;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.about-section p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #323130;
+}
+
+.about-section ul,
+.about-section ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-section li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.about-section strong {
+  color: #0078d4;
+}
+
+/* Add these styles for the header icon */
+.app-header {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #1b1b1b;
+  color: white;
+}
+
+.app-header img {
+  width: 24px;  /* Increased from default size */
+  height: 24px;  /* Maintain aspect ratio */
+  margin-right: 8px;  /* Add space between icon and text */
+  object-fit: contain;  /* Prevent image distortion */
+}
+
+.app-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  margin: 0;
+}
+
 

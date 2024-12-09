@@ -20,6 +20,7 @@ import { DetailsTab } from './components/DetailsTab';
 import { TabNavigation } from './components/TabNavigation';
 import { ResizeHandle } from './components/ResizeHandle';
 import { PreviewSection } from './components/PreviewSection';
+import { AboutTab } from './components/AboutTab';
 import '../../styles/PolicyEditor.css';
 
 /**
@@ -129,6 +130,9 @@ const PolicyEditor: React.FC = () => {
             onUpdateDetails={handleUpdateDetails}
           />
         )}
+
+        {/* About Tab */}
+        {activeTab === 'about' && <AboutTab />}
       </div>
 
       {/* Resize handle */}

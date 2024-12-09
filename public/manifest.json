@@ -1,6 +1,15 @@
 {
-  "short_name": "Policy Builder",
-  "name": "Azure Policy Builder",
+  "short_name": "Azure Policy Editor",
+  "name": "Azure Policy Editor",
+  "icons": [
+    {
+      "src": "azure-policy.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    }
+  ],
   "start_url": ".",
-  "display": "standalone"
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
