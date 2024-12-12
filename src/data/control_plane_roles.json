@@ -92,6 +92,10 @@
     "roleName": "Billing Reader"
   },
   {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/00c29273-979b-4161-815c-10b084fb9324",
+    "roleName": "Backup Operator"
+  },
+  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/a795c7a0-d4a2-40c1-ae25-d81f01202912",
     "roleName": "Backup Reader"
   },
@@ -106,6 +110,10 @@
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/426e0c7f-0c7e-4658-b36f-ff54d6c29b45",
     "roleName": "CDN Endpoint Contributor"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/871e35f6-b5c1-49cc-a043-bde969a0f2cd",
+    "roleName": "CDN Endpoint Reader"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/ec156ff8-a8d1-4d15-830c-5b80698ca432",
@@ -272,12 +280,20 @@
     "roleName": "Management Group Reader"
   },
   {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/3913510d-42f4-4e42-8a64-420c390055eb",
+    "roleName": "Monitoring Metrics Publisher"
+  },
+  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/43d0d8ad-25c7-4714-9337-8ba259a9fe05",
     "roleName": "Monitoring Reader"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/4d97b98b-1d4f-4787-a291-c67834d212e7",
     "roleName": "Network Contributor"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/749f88d5-cbae-40b8-bcfc-e573ddc772fa",
+    "roleName": "Monitoring Contributor"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/5d28c62d-5b37-4476-8438-e587778df237",
@@ -508,6 +524,14 @@
     "roleName": "Microsoft Sentinel Reader"
   },
   {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/b279062a-9be3-42a0-92ae-8b3cf002ec4d",
+    "roleName": "Workbook Reader"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/e8ddcd69-c73f-4f9f-9844-4100522f16ad",
+    "roleName": "Workbook Contributor"
+  },
+  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/66bb4e9e-b016-4a94-8249-4c0511c2be84",
     "roleName": "Policy Insights Data Writer (Preview)"
   },
@@ -522,6 +546,10 @@
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/b64e21ea-ac4e-4cdf-9dc9-5b892992bee7",
     "roleName": "Azure Connected Machine Onboarding"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/cd570a14-e51a-42ad-bac8-bafd67325302",
+    "roleName": "Azure Connected Machine Resource Administrator"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/91c1777a-f3dc-4fae-b103-61d183457e46",
@@ -652,6 +680,10 @@
     "roleName": "Key Vault Administrator"
   },
   {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/14b46e9e-c2b7-41b4-b07b-48a6ebf60603",
+    "roleName": "Key Vault Crypto Officer"
+  },
+  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/12338af0-0e69-4776-bea7-57ae8d297424",
     "roleName": "Key Vault Crypto User"
   },
@@ -716,6 +748,10 @@
     "roleName": "Object Understanding Account Reader"
   },
   {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/00493d72-78f6-4148-b6c5-d3ce8e4799dd",
+    "roleName": "Azure Arc Enabled Kubernetes Cluster User Role"
+  },
+  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/fd53cd77-2268-407a-8f46-7e7863d0f521",
     "roleName": "SignalR REST API Owner"
   },
@@ -734,6 +770,14 @@
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/0378884a-3af5-44ab-8323-f5b22f9f3c98",
     "roleName": "Device Update Content Administrator"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/e4237640-0e3d-4a46-8fda-70bc94856432",
+    "roleName": "Device Update Deployments Administrator"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/49e2f5d2-7741-4835-8efa-19e1fe35e47f",
+    "roleName": "Device Update Deployments Reader"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/d1ee9a80-8b14-47f0-bdc2-f4a351625a7b",
@@ -812,6 +856,18 @@
     "roleName": "Project Babylon Data Source Administrator"
   },
   {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/8a3c2885-9b38-4fd2-9d99-91af537c1347",
+    "roleName": "Purview role 1 (Deprecated)"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/ff100721-1b9d-43d8-af52-42b69c1272db",
+    "roleName": "Purview role 3 (Deprecated)"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/200bba9e-f0c8-430f-892b-6f0794863803",
+    "roleName": "Purview role 2 (Deprecated)"
+  },
+  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/ca6382a4-1721-4bcf-a114-ff0c70227b6b",
     "roleName": "Application Group Contributor"
   },
@@ -860,6 +916,18 @@
     "roleName": "Disk Backup Reader"
   },
   {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/b8b15564-4fa6-4a59-ab12-03e1d9594795",
+    "roleName": "Autonomous Development Platform Data Contributor (Preview)"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/d63b75f7-47ea-4f27-92ac-e0d173aaf093",
+    "roleName": "Autonomous Development Platform Data Reader (Preview)"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/27f8b550-c507-4db9-86f2-f4b8e816d59d",
+    "roleName": "Autonomous Development Platform Data Owner (Preview)"
+  },
+  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/b50d9833-a0cb-478e-945f-707fcc997c13",
     "roleName": "Disk Restore Operator"
   },
@@ -892,6 +960,10 @@
     "roleName": "FHIR Data Converter"
   },
   {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/f4c81013-99ee-4d62-a7ee-b3f1f648599a",
+    "roleName": "Microsoft Sentinel Automation Contributor"
+  },
+  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/0e5f05e5-9ab9-446b-b98d-1e2157c94125",
     "roleName": "Quota Request Operator"
   },
@@ -918,6 +990,10 @@
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/b5537268-8956-4941-a8f0-646150406f0c",
     "roleName": "Azure Spring Cloud Data Reader"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/f2dc8367-1007-4938-bd23-fe263f013447",
+    "roleName": "Cognitive Services Speech User"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/0e75ca1e-0464-4b4d-8b93-68208a576181",
@@ -1192,66 +1268,6 @@
     "roleName": "Virtual Machine Administrator Login"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/cd570a14-e51a-42ad-bac8-bafd67325302",
-    "roleName": "Azure Connected Machine Resource Administrator"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/00c29273-979b-4161-815c-10b084fb9324",
-    "roleName": "Backup Operator"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/e8ddcd69-c73f-4f9f-9844-4100522f16ad",
-    "roleName": "Workbook Contributor"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/b279062a-9be3-42a0-92ae-8b3cf002ec4d",
-    "roleName": "Workbook Reader"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/749f88d5-cbae-40b8-bcfc-e573ddc772fa",
-    "roleName": "Monitoring Contributor"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/3913510d-42f4-4e42-8a64-420c390055eb",
-    "roleName": "Monitoring Metrics Publisher"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/8a3c2885-9b38-4fd2-9d99-91af537c1347",
-    "roleName": "Purview role 1 (Deprecated)"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/200bba9e-f0c8-430f-892b-6f0794863803",
-    "roleName": "Purview role 2 (Deprecated)"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/ff100721-1b9d-43d8-af52-42b69c1272db",
-    "roleName": "Purview role 3 (Deprecated)"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/b8b15564-4fa6-4a59-ab12-03e1d9594795",
-    "roleName": "Autonomous Development Platform Data Contributor (Preview)"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/27f8b550-c507-4db9-86f2-f4b8e816d59d",
-    "roleName": "Autonomous Development Platform Data Owner (Preview)"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/d63b75f7-47ea-4f27-92ac-e0d173aaf093",
-    "roleName": "Autonomous Development Platform Data Reader (Preview)"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/14b46e9e-c2b7-41b4-b07b-48a6ebf60603",
-    "roleName": "Key Vault Crypto Officer"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/49e2f5d2-7741-4835-8efa-19e1fe35e47f",
-    "roleName": "Device Update Deployments Reader"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/e4237640-0e3d-4a46-8fda-70bc94856432",
-    "roleName": "Device Update Deployments Administrator"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/67d33e57-3129-45e6-bb0b-7cc522f762fa",
     "roleName": "Azure Arc VMware Private Clouds Onboarding"
   },
@@ -1260,20 +1276,8 @@
     "roleName": "Chamber Admin"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/f4c81013-99ee-4d62-a7ee-b3f1f648599a",
-    "roleName": "Microsoft Sentinel Automation Contributor"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/871e35f6-b5c1-49cc-a043-bde969a0f2cd",
-    "roleName": "CDN Endpoint Reader"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/4447db05-44ed-4da3-ae60-6cbece780e32",
     "roleName": "Chamber User"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/f2dc8367-1007-4938-bd23-fe263f013447",
-    "roleName": "Cognitive Services Speech User"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/a6333a3e-0164-44c3-b281-7a577aff287f",
@@ -1298,10 +1302,6 @@
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/0f2ebee7-ffd4-4fc0-b3b7-664099fdad5d",
     "roleName": "DNS Resolver Contributor"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/00493d72-78f6-4148-b6c5-d3ce8e4799dd",
-    "roleName": "Azure Arc Enabled Kubernetes Cluster User Role"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/959f8984-c045-4866-89c7-12bf9737be2e",
@@ -1348,12 +1348,12 @@
     "roleName": "Azure Arc ScVmm Private Cloud User"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/7656b436-37d4-490a-a4ab-d39f838f0042",
-    "roleName": "HDInsight on AKS Cluster Pool Admin"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/fd036e6b-1266-47a0-b0bb-a05d04831731",
     "roleName": "HDInsight on AKS Cluster Admin"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/7656b436-37d4-490a-a4ab-d39f838f0042",
+    "roleName": "HDInsight on AKS Cluster Pool Admin"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/4465e953-8ced-4406-a58e-0f6e3f3b530b",
@@ -1380,24 +1380,24 @@
     "roleName": "Elastic SAN Reader"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/a959dbd1-f747-45e3-8ba6-dd80f235f97c",
-    "roleName": "Desktop Virtualization Virtual Machine Contributor"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/489581de-a3bd-480d-9518-53dea7416b33",
+    "roleName": "Desktop Virtualization Power On Contributor"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/40c5ff49-9181-41f8-ae61-143b0e78555e",
     "roleName": "Desktop Virtualization Power On Off Contributor"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/489581de-a3bd-480d-9518-53dea7416b33",
-    "roleName": "Desktop Virtualization Power On Contributor"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/a8281131-f312-4f34-8d98-ae12be9f0d23",
-    "roleName": "Elastic SAN Volume Group Owner"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/a959dbd1-f747-45e3-8ba6-dd80f235f97c",
+    "roleName": "Desktop Virtualization Virtual Machine Contributor"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/76cc9ee4-d5d3-4a45-a930-26add3d73475",
     "roleName": "Access Review Operator Service Role"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/a8281131-f312-4f34-8d98-ae12be9f0d23",
+    "roleName": "Elastic SAN Volume Group Owner"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/4339b7cf-9826-4e41-b4ed-c7f4505dac08",
@@ -1412,24 +1412,24 @@
     "roleName": "Monitoring Data Reader"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/5af6afb3-c06c-4fa4-8848-71a8aee05683",
-    "roleName": "Azure Kubernetes Fleet Manager RBAC Writer"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/63bb64ad-9799-4770-b5c3-24ed299a07bf",
+    "roleName": "Azure Kubernetes Fleet Manager Contributor Role"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/434fb43a-c01c-447e-9f67-c3ad923cfaba",
     "roleName": "Azure Kubernetes Fleet Manager RBAC Admin"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/63bb64ad-9799-4770-b5c3-24ed299a07bf",
-    "roleName": "Azure Kubernetes Fleet Manager Contributor Role"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/18ab4d3d-a1bf-4477-8ad9-8359bc988f69",
+    "roleName": "Azure Kubernetes Fleet Manager RBAC Cluster Admin"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/30b27cfc-9c84-438e-b0ce-70e35255df80",
     "roleName": "Azure Kubernetes Fleet Manager RBAC Reader"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/18ab4d3d-a1bf-4477-8ad9-8359bc988f69",
-    "roleName": "Azure Kubernetes Fleet Manager RBAC Cluster Admin"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/5af6afb3-c06c-4fa4-8848-71a8aee05683",
+    "roleName": "Azure Kubernetes Fleet Manager RBAC Writer"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/ba79058c-0414-4a34-9e42-c3399d80cd5a",
@@ -1444,12 +1444,12 @@
     "roleName": "Role Based Access Control Administrator"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/1c9b6475-caf0-4164-b5a1-2142a7116f4b",
-    "roleName": "Template Spec Contributor"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/392ae280-861d-42bd-9ea5-08ee6d83b80e",
     "roleName": "Template Spec Reader"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/1c9b6475-caf0-4164-b5a1-2142a7116f4b",
+    "roleName": "Template Spec Contributor"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/51d6186e-6489-4900-b93f-92e23144cca5",
@@ -1468,20 +1468,20 @@
     "roleName": "Azure Spring Apps Remote Debugging Role"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/1823dd4f-9b8c-4ab6-ab4e-7397a3684615",
-    "roleName": "AzureML Registry User"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/e503ece1-11d0-4e8e-8e2c-7a6c3bf38815",
     "roleName": "AzureML Compute Operator"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/aabbc5dd-1af0-458b-a942-81af88f9c138",
-    "roleName": "Azure Center for SAP solutions service role"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/1823dd4f-9b8c-4ab6-ab4e-7397a3684615",
+    "roleName": "AzureML Registry User"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/05352d14-a920-4328-a0de-4cbe7430e26b",
     "roleName": "Azure Center for SAP solutions reader"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/aabbc5dd-1af0-458b-a942-81af88f9c138",
+    "roleName": "Azure Center for SAP solutions service role"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/7b0c7e81-271f-4c71-90bf-e30bdfdbc2f7",
@@ -1512,12 +1512,12 @@
     "roleName": "Impact Reader"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/1afdec4b-e479-420e-99e7-f82237c7c5e6",
-    "roleName": "Azure Kubernetes Service Cluster Monitoring User"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/ad2dd5fb-cd4b-4fd4-a9b6-4fed3630980b",
     "roleName": "ContainerApp Reader"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/1afdec4b-e479-420e-99e7-f82237c7c5e6",
+    "roleName": "Azure Kubernetes Service Cluster Monitoring User"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/f5819b54-e033-4d82-ac66-4fec3cbf3f4c",
@@ -1528,12 +1528,12 @@
     "roleName": "SqlDb Migration Role"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/c4bc862a-3b64-4a35-a021-a380c159b042",
-    "roleName": "Bayer Ag Powered Services GDU Solution"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/ef29765d-0d37-4119-a4f8-f9f9902c9588",
     "roleName": "Bayer Ag Powered Services Imagery Solution"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/c4bc862a-3b64-4a35-a021-a380c159b042",
+    "roleName": "Bayer Ag Powered Services GDU Solution"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/0105a6b0-4bb9-43d2-982a-12806f9faddb",
@@ -1568,16 +1568,16 @@
     "roleName": "SqlVM Migration Role"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/0ab34830-df19-4f8c-b84e-aa85b8afa6e8",
-    "roleName": "Azure Front Door Domain Contributor"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/3f2eb865-5811-4578-b90a-6fc6fa0df8e5",
+    "roleName": "Azure Front Door Secret Contributor"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/0db238c4-885e-4c4f-a933-aa2cef684fca",
     "roleName": "Azure Front Door Secret Reader"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/3f2eb865-5811-4578-b90a-6fc6fa0df8e5",
-    "roleName": "Azure Front Door Secret Contributor"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/0ab34830-df19-4f8c-b84e-aa85b8afa6e8",
+    "roleName": "Azure Front Door Domain Contributor"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/0f99d363-226e-4dca-9920-b807cf8e1a5f",
@@ -1608,6 +1608,10 @@
     "roleName": "Azure Maps Data Read and Batch Role"
   },
   {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/73c2c328-d004-4c5e-938c-35c6f5679a1f",
+    "roleName": "API Management Workspace API Product Manager"
+  },
+  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/d59a3e9c-6d52-4a5a-aeed-6bf3cf0e31da",
     "roleName": "API Management Service Workspace API Product Manager"
   },
@@ -1620,16 +1624,12 @@
     "roleName": "API Management Workspace Reader"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/73c2c328-d004-4c5e-938c-35c6f5679a1f",
-    "roleName": "API Management Workspace API Product Manager"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/0c34c906-8d99-4cb7-8bb7-33f5b0a1a799",
+    "roleName": "API Management Workspace Contributor"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/9565a273-41b9-4368-97d2-aeb0c976a9b3",
     "roleName": "API Management Service Workspace API Developer"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/0c34c906-8d99-4cb7-8bb7-33f5b0a1a799",
-    "roleName": "API Management Workspace Contributor"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/b8eda974-7b85-4f76-af95-65846b26df6d",
@@ -1684,12 +1684,12 @@
     "roleName": "Procurement Contributor"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/7ac06ca7-21ca-47e3-a67b-cbd6e6223baf",
-    "roleName": "Cognitive Search Serverless Data Contributor (Deprecated)"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/79b01272-bf9f-4f4c-9517-5506269cf524",
     "roleName": "Cognitive Search Serverless Data Reader (Deprecated)"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/7ac06ca7-21ca-47e3-a67b-cbd6e6223baf",
+    "roleName": "Cognitive Search Serverless Data Contributor (Deprecated)"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/5e28a61e-8040-49db-b175-bb5b88af6239",
@@ -1700,12 +1700,12 @@
     "roleName": "Firmware Analysis Admin"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/8b54135c-b56d-4d72-a534-26097cfdc8d8",
-    "roleName": "Key Vault Data Access Administrator"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/1e7ca9b1-60d1-4db8-a914-f2ca1ff27c40",
     "roleName": "Defender for Storage Data Scanner"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/8b54135c-b56d-4d72-a534-26097cfdc8d8",
+    "roleName": "Key Vault Data Access Administrator"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/df2711a6-406d-41cf-b366-b0250bff9ad1",
@@ -1732,12 +1732,12 @@
     "roleName": "Virtual Machine Data Access Administrator (preview)"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/523776ba-4eb2-4600-a3c8-f2dc93da4bdb",
-    "roleName": "Logic Apps Standard Developer (Preview)"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/ad710c24-b039-4e85-a019-deb4a06e8570",
     "roleName": "Logic Apps Standard Contributor (Preview)"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/523776ba-4eb2-4600-a3c8-f2dc93da4bdb",
+    "roleName": "Logic Apps Standard Developer (Preview)"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/b70c96e9-66fe-4c09-b6e7-c98e69c98555",
@@ -1844,12 +1844,12 @@
     "roleName": "EventGrid Data Contributor"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/8aac15f0-d885-4138-8afa-bfb5872f7d13",
-    "roleName": "Advisor Reviews Contributor"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/c64499e0-74c3-47ad-921c-13865957895c",
     "roleName": "Advisor Reviews Reader"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/8aac15f0-d885-4138-8afa-bfb5872f7d13",
+    "roleName": "Advisor Reviews Contributor"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/3afb7f49-54cb-416e-8c09-6dc049efa503",
@@ -1876,12 +1876,12 @@
     "roleName": "Enclave Reader Role"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/fc3f91a1-40bf-4439-8c46-45edbd83563a",
-    "roleName": "Azure Kubernetes Service Hybrid Cluster User Role"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/b5092dac-c796-4349-8681-1a322a31c3f9",
     "roleName": "Azure Kubernetes Service Hybrid Cluster Admin Role"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/fc3f91a1-40bf-4439-8c46-45edbd83563a",
+    "roleName": "Azure Kubernetes Service Hybrid Cluster User Role"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/e7037d40-443a-4434-a3fb-8cd202011e1d",
@@ -1900,12 +1900,12 @@
     "roleName": "Community Reader Role"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/a316ed6d-1efe-48ac-ac08-f7995a9c26fb",
-    "roleName": "Storage Account Encryption Scope Contributor Role"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/44f0a1a8-6fea-4b35-980a-8ff50c487c97",
     "roleName": "Operator Nexus Key Vault Writer Service Role (Preview)"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/a316ed6d-1efe-48ac-ac08-f7995a9c26fb",
+    "roleName": "Storage Account Encryption Scope Contributor Role"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/08bbd89e-9f13-488c-ac41-acfcb10c90ab",
@@ -1928,12 +1928,12 @@
     "roleName": "Azure Spring Apps Managed Components Log Reader Role"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/6593e776-2a30-40f9-8a32-4fe28b77655d",
-    "roleName": "Azure Spring Apps Application Configuration Service Log Reader Role"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/4301dc2a-25a9-44b0-ae63-3636cf7f2bd2",
     "roleName": "Azure Spring Apps Spring Cloud Gateway Log Reader Role"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/6593e776-2a30-40f9-8a32-4fe28b77655d",
+    "roleName": "Azure Spring Apps Application Configuration Service Log Reader Role"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/207bcc4b-86a6-4487-9141-d6c1f4c238aa",
@@ -1956,12 +1956,8 @@
     "roleName": "Azure Red Hat OpenShift Cloud Controller Manager Role"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/5b7237c5-45e1-49d6-bc18-a1f62f400748",
-    "roleName": "Azure Red Hat OpenShift Storage Operator Role"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/be7a6435-15ae-4171-8f30-4a343eff9e8f",
-    "roleName": "Azure Red Hat OpenShift Network Operator Role"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/0336e1d3-7a87-462b-b6db-342b63f7802c",
+    "roleName": "Azure Red Hat OpenShift Cluster Ingress Operator Role"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/8b32b316-c2f5-4ddf-b05b-83dacd2d08b5",
@@ -1972,28 +1968,32 @@
     "roleName": "Azure Red Hat OpenShift Azure Files Storage Operator Role"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/4436bae4-7702-4c84-919b-c4069ff25ee2",
-    "roleName": "Azure Red Hat OpenShift Service Operator Role"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/be7a6435-15ae-4171-8f30-4a343eff9e8f",
+    "roleName": "Azure Red Hat OpenShift Network Operator Role"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/0358943c-7e01-48ba-8889-02cc51d78637",
     "roleName": "Azure Red Hat OpenShift Machine API Operator Role"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/0336e1d3-7a87-462b-b6db-342b63f7802c",
-    "roleName": "Azure Red Hat OpenShift Cluster Ingress Operator Role"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/4436bae4-7702-4c84-919b-c4069ff25ee2",
+    "roleName": "Azure Red Hat OpenShift Service Operator Role"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/5b7237c5-45e1-49d6-bc18-a1f62f400748",
+    "roleName": "Azure Red Hat OpenShift Storage Operator Role"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/5a382001-fe36-41ff-bba4-8bf06bd54da9",
     "roleName": "Azure Sphere Owner"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/e2217c0e-04bb-4724-9580-91cf9871bc01",
-    "roleName": "GroupQuota Request Operator"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/d0f495dc-44ef-4140-aeb0-b89110e6a7c1",
     "roleName": "GroupQuota Reader"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/e2217c0e-04bb-4724-9580-91cf9871bc01",
+    "roleName": "GroupQuota Request Operator"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/539283cd-c185-4a9a-9503-d35217a1db7b",
@@ -2016,16 +2016,16 @@
     "roleName": "GeoCatalog Reader"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/af854a69-80ce-4ff7-8447-f1118a2e0ca8",
-    "roleName": "Health Bot Editor"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/eb5a76d5-50e7-4c33-a449-070e7c9c4cf2",
     "roleName": "Health Bot Reader"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/c20923c5-b089-47a5-bf67-fd89569c4ad9",
     "roleName": "Azure Programmable Connectivity Gateway Dataplane User"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/af854a69-80ce-4ff7-8447-f1118a2e0ca8",
+    "roleName": "Health Bot Editor"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/f1082fec-a70f-419f-9230-885d2550fb38",
@@ -2048,10 +2048,6 @@
     "roleName": "Azure Container Storage Owner"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/5d3f1697-4507-4d08-bb4a-477695db5f82",
-    "roleName": "Azure Kubernetes Service Arc Contributor Role"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/233ca253-b031-42ff-9fba-87ef12d6b55f",
     "roleName": "Azure Kubernetes Service Arc Cluster User Role"
   },
@@ -2060,12 +2056,16 @@
     "roleName": "Azure Kubernetes Service Arc Cluster Admin Role"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/f54b6d04-23c6-443e-b462-9c16ab7b4a52",
-    "roleName": "Backup MUA Operator"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/5d3f1697-4507-4d08-bb4a-477695db5f82",
+    "roleName": "Azure Kubernetes Service Arc Contributor Role"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/c2a970b4-16a7-4a51-8c84-8a8ea6ee0bb8",
     "roleName": "Backup MUA Admin"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/f54b6d04-23c6-443e-b462-9c16ab7b4a52",
+    "roleName": "Backup MUA Operator"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/3d24a3a0-c154-4f6f-a5ed-adc8e01ddb74",
@@ -2084,16 +2084,16 @@
     "roleName": "Kubernetes Agent Operator"
   },
   {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/ede9aaa3-4627-494e-be13-4aa7c256148d",
+    "roleName": "Azure API Center Compliance Manager"
+  },
+  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/dd24193f-ef65-44e5-8a7e-6fa6e03f7713",
     "roleName": "Azure API Center Service Contributor"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/6cba8790-29c5-48e5-bab1-c7541b01cb04",
     "roleName": "Azure API Center Service Reader"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/ede9aaa3-4627-494e-be13-4aa7c256148d",
-    "roleName": "Azure API Center Compliance Manager"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/b5b192c1-773c-4543-bfb0-6c59254b74a9",
@@ -2104,16 +2104,16 @@
     "roleName": "Oracle.Database VmCluster Administrator Built-in Role"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/d623d097-b882-4e1e-a26f-ac60e31065a1",
-    "roleName": "Oracle.Database Reader Built-in Role"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/4caf51ec-f9f5-413f-8a94-b9f5fddba66b",
+    "roleName": "Oracle Subscriptions Manager Built-in Role"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/4562aac9-b209-4bd7-a144-6d7f3bb516f4",
     "roleName": "Oracle.Database Owner Built-in Role"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/4caf51ec-f9f5-413f-8a94-b9f5fddba66b",
-    "roleName": "Oracle Subscriptions Manager Built-in Role"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/d623d097-b882-4e1e-a26f-ac60e31065a1",
+    "roleName": "Oracle.Database Reader Built-in Role"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/4cfdd23b-aece-4fd1-b614-ad3a06c53453",
@@ -2176,12 +2176,12 @@
     "roleName": "Nexus Network Fabric Service Writer"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/bf7f8882-3383-422a-806a-6526c631a88a",
-    "roleName": "Azure Deployment Stack Contributor"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/adb29209-aa1d-457b-a786-c913953d2891",
     "roleName": "Azure Deployment Stack Owner"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/bf7f8882-3383-422a-806a-6526c631a88a",
+    "roleName": "Azure Deployment Stack Contributor"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/74252426-c508-480e-9345-4607bbebead4",
@@ -2192,16 +2192,16 @@
     "roleName": "Container Registry Repository Catalog Lister"
   },
   {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/b93aa761-3e63-49ed-ac28-beffa264f7ac",
+    "roleName": "Container Registry Repository Reader"
+  },
+  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/2efddaa5-3f1f-4df3-97df-af3f13818f4c",
     "roleName": "Container Registry Repository Contributor"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/2a1e307c-b015-4ebd-883e-5b7698a07328",
     "roleName": "Container Registry Repository Writer"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/b93aa761-3e63-49ed-ac28-beffa264f7ac",
-    "roleName": "Container Registry Repository Reader"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/78e4b983-1a0b-472e-8b7d-8d770f7c5890",
@@ -2228,20 +2228,20 @@
     "roleName": "ToolchainOrchestrator Admin Role"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/4d8c6f2e-3fd6-4d40-826e-93e3dc4c3fc1",
-    "roleName": "ProviderHub Reader"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/a3ab03bc-5350-42ff-b0d5-00207672db55",
     "roleName": "ProviderHub Contributor"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/c99c945f-8bd1-4fb1-a903-01460aae6068",
-    "roleName": "Azure Stack HCI Connected InfraVMs"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/4d8c6f2e-3fd6-4d40-826e-93e3dc4c3fc1",
+    "roleName": "ProviderHub Reader"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/dfce8971-25e3-42e3-ba33-6055438e3080",
     "roleName": "VM Restore Operator"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/c99c945f-8bd1-4fb1-a903-01460aae6068",
+    "roleName": "Azure Stack HCI Connected InfraVMs"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/0847e196-2fd2-4c2f-a48c-fca6fd030f44",
@@ -2292,32 +2292,32 @@
     "roleName": "Container Apps Operator"
   },
   {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/f7669afb-68b2-44b4-9c5f-6d2a47fddda0",
+    "roleName": "Container Apps SessionPools Contributor"
+  },
+  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/57cc5028-e6a7-4284-868d-0611c5923f8d",
     "roleName": "Container Apps ManagedEnvironments Contributor"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/358470bc-b998-42bd-ab17-a7e34c199c0f",
-    "roleName": "Container Apps Contributor"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/1b32c00b-7eff-4c22-93e6-93d11d72d2d8",
-    "roleName": "Container Apps ManagedEnvironments Reader"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/edd66693-d32a-450b-997d-0158c03976b0",
-    "roleName": "Container Apps Jobs Reader"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/af61e8fc-2633-4b95-bed3-421ad6826515",
     "roleName": "Container Apps SessionPools Reader"
   },
   {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/edd66693-d32a-450b-997d-0158c03976b0",
+    "roleName": "Container Apps Jobs Reader"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/1b32c00b-7eff-4c22-93e6-93d11d72d2d8",
+    "roleName": "Container Apps ManagedEnvironments Reader"
+  },
+  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/4e3d2b60-56ae-4dc6-a233-09c8e5a82e68",
     "roleName": "Container Apps Jobs Contributor"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/f7669afb-68b2-44b4-9c5f-6d2a47fddda0",
-    "roleName": "Container Apps SessionPools Contributor"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/358470bc-b998-42bd-ab17-a7e34c199c0f",
+    "roleName": "Container Apps Contributor"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/0ad04412-c4d5-4796-b79c-f76d14c8d402",
@@ -2352,6 +2352,10 @@
     "roleName": "Cognitive Services Face Contributor"
   },
   {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/9fc6112f-f48e-4e27-8b09-72a5c94e4ae9",
+    "roleName": "Azure Bot Service Contributor Role"
+  },
+  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/b9a307c4-5aa3-4b52-ba60-2b17c136cd7b",
     "roleName": "Container Apps Jobs Operator"
   },
@@ -2360,16 +2364,12 @@
     "roleName": "Operator Nexus Owner (Preview)"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/4e9d0bd4-5aab-4f91-92df-9def33fe287c",
-    "roleName": "CloudTest Contributor Role"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/8d6517c1-e434-405c-9f3f-e0ae65085d76",
     "roleName": "Azure Automanage Contributor"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/9fc6112f-f48e-4e27-8b09-72a5c94e4ae9",
-    "roleName": "Azure Bot Service Contributor Role"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/4e9d0bd4-5aab-4f91-92df-9def33fe287c",
+    "roleName": "CloudTest Contributor Role"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/175b81b9-6e0d-490a-85e4-0d422273c10c",
@@ -2412,36 +2412,36 @@
     "roleName": "Durable Task Worker"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/bf2b6809-e9a5-4aea-a6e1-40a9dc8c43a7",
-    "roleName": "Landing Zone Account Owner"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/2718b1f7-eb07-424e-8868-0137541392a1",
     "roleName": "Landing Zone Account Reader"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/bf2b6809-e9a5-4aea-a6e1-40a9dc8c43a7",
+    "roleName": "Landing Zone Account Owner"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/21bffb94-04c0-4ed0-b676-68bb926e832b",
     "roleName": "Microsoft.Windows365.CloudPcDelegatedMsis Writer User"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/48e5e92e-a480-4e71-aa9c-2778f4c13781",
-    "roleName": "Azure Batch Job Submitter"
-  },
-  {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/11076f67-66f6-4be0-8f6b-f0609fd05cc9",
-    "roleName": "Azure Batch Account Reader"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/0b6ca2e8-2cdc-4bd6-b896-aa3d8c21fc35",
+    "roleName": "Defender CSPM Storage Data Scanner"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/29fe4964-1e60-436b-bd3a-77fd4c178b3c",
     "roleName": "Azure Batch Account Contributor"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/6aaa78f1-f7de-44ca-8722-c64a23943cae",
-    "roleName": "Azure Batch Data Contributor"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/11076f67-66f6-4be0-8f6b-f0609fd05cc9",
+    "roleName": "Azure Batch Account Reader"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/0b6ca2e8-2cdc-4bd6-b896-aa3d8c21fc35",
-    "roleName": "Defender CSPM Storage Data Scanner"
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/48e5e92e-a480-4e71-aa9c-2778f4c13781",
+    "roleName": "Azure Batch Job Submitter"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/6aaa78f1-f7de-44ca-8722-c64a23943cae",
+    "roleName": "Azure Batch Data Contributor"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/5c2d7e57-b7c2-4d8a-be4f-82afa42c6e95",
@@ -2468,12 +2468,12 @@
     "roleName": "Azure Kubernetes Fleet Manager RBAC Cluster Writer"
   },
   {
-    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/ff478a4e-8633-416e-91bc-ec33ce7c9516",
-    "roleName": "Azure Messaging Connectors Owner"
-  },
-  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/6f4fe6fc-f04f-4d97-8528-8bc18c848dca",
     "roleName": "Container Apps ConnectedEnvironments Contributor"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/ff478a4e-8633-416e-91bc-ec33ce7c9516",
+    "roleName": "Azure Messaging Connectors Owner"
   },
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/3bc748fc-213d-45c1-8d91-9da5725539b9",
