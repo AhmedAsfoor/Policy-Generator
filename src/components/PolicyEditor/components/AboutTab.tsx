@@ -3,6 +3,14 @@ import React from 'react';
 export const AboutTab: React.FC = () => {
   return (
     <div className="about-tab">
+      <section className="about-section disclaimer">
+        <h2>Disclaimer</h2>
+        <p>
+          This tool is an independent project and is not developed, endorsed, or supported by Microsoft. 
+          Azure Policy Editor is a third-party tool designed to assist with Azure Policy creation, but it is not an official Microsoft product.
+        </p>
+      </section>
+
       <section className="about-section">
         <h2>About Azure Policy Editor</h2>
         <p>
