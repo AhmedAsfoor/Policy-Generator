@@ -7,7 +7,7 @@ export const AboutTab: React.FC = () => {
         <h2>Disclaimer</h2>
         <p>
           This tool is an independent project and is not developed, endorsed, or supported by Microsoft. 
-          Azure Policy Editor is a third-party tool designed to assist with Azure Policy creation, but it is not an official Microsoft product.
+          Azure Policy Editor is a third-party tool designed to assist with Azure Policy creation, but it is not an official Microsoft product. The tool is still in the development stage.
         </p>
       </section>
 
