@@ -2518,5 +2518,9 @@
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/59c05558-2358-462d-ba19-afbd7118936d",
     "roleName": "Oracle.Database Autonomous Database Administrator"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/11102f94-c441-49e6-a78b-ef80e0188abc",
+    "roleName": "Azure AI Safety Evaluator"
   }
 ]
