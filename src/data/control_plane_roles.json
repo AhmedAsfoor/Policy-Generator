@@ -2468,6 +2468,18 @@
     "roleName": "Azure Kubernetes Fleet Manager RBAC Cluster Writer"
   },
   {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/7c2e40b7-25eb-482a-82cb-78ba06cb46d5",
+    "roleName": "Chaos Studio Experiment Contributor"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/29e2da8a-229c-4157-8ae8-cc72fc506b74",
+    "roleName": "Chaos Studio Reader"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/1a40e87e-6645-48e0-b27a-0b115d849a20",
+    "roleName": "Chaos Studio Operator"
+  },
+  {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/6f4fe6fc-f04f-4d97-8528-8bc18c848dca",
     "roleName": "Container Apps ConnectedEnvironments Contributor"
   },
