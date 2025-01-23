@@ -2546,5 +2546,9 @@
   {
     "roleId": "/providers/Microsoft.Authorization/roleDefinitions/afc680e2-a938-412d-b213-9a49efa7fb83",
     "roleName": "Azure Backup Snapshot Contributor"
+  },
+  {
+    "roleId": "/providers/Microsoft.Authorization/roleDefinitions/53e48117-a530-4075-bcbe-d91913e3bdb8",
+    "roleName": "Edge Management Copilot User"
   }
 ]
