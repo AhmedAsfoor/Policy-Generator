@@ -982,6 +982,7 @@
   "Microsoft.Sql/servers/auditingSettings/auditActionsAndGroups[*] (properties.auditActionsAndGroups[*])",
   "Microsoft.Sql/servers/auditingSettings/auditActionsAndGroups (properties.auditActionsAndGroups)",
   "Microsoft.Sql/servers/elasticpools/licenseType (properties.licenseType)",
+  "Microsoft.Sql/instancePools/licenseType (properties.licenseType)",
   "Microsoft.Sql/managedInstances/licenseType (properties.licenseType)",
   "Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies/weeklyRetention (properties.weeklyRetention)",
   "Microsoft.Sql/managedInstances/databases/backupLongTermRetentionPolicies/monthlyRetention (properties.monthlyRetention)",
